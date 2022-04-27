@@ -5,7 +5,7 @@ import { mergeMap, of, retry, tap } from 'rxjs';
 export class AppController {
   constructor(private readonly http: HttpService) {}
   @Get()
-  moduleRetry(url = 'http://localhost:3000') {
+  retry(url = 'http://localhost:3000') {
     this.http
       .get(url)
       .pipe(
